@@ -2,17 +2,6 @@ var ContactListYo;
 (function (ContactListYo) {
     var Services;
     (function (Services) {
-        var MovieService = (function () {
-            function MovieService($resource) {
-                this.MovieResource = $resource('/api/movies');
-            }
-            MovieService.prototype.listMovies = function () {
-                return this.MovieResource.query();
-            };
-            return MovieService;
-        }());
-        Services.MovieService = MovieService;
-        angular.module('ContactListYo').service('movieService', MovieService);
         var ContactListService = (function () {
             function ContactListService() {
                 this.contacts = [
